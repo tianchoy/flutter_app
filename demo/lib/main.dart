@@ -1,8 +1,6 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
-import 'List/chuizhiList.dart';
-import 'List/hengxiangList.dart';
 import 'response/listData.dart';
 
 void main() => runApp(const MyApp());
@@ -16,54 +14,70 @@ class MyApp extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Flutter-title'),
       ),
-      body: Dongtai(),
+      body: const GrideView(),
     ));
   }
 }
 
-class Dongtai extends StatelessWidget {
-  // List<Widget> _getData() {
+class GrideView extends StatelessWidget {
+  const GrideView({Key? key}) : super(key: key);
+
+  // List<Widget> _getGridViewData() {
   //   List<Widget> list = [];
-  //   for (int i = 0; i < 10; i++) {
-  //     list.add(ListTile(
-  //       title: Text('标题$i'),
+  //   for (int i = 0; i <= 11; i++) {
+  //     list.add(Container(
+  //       alignment: Alignment.center,
+  //       color: Colors.blue,
+  //       child: Text(
+  //         'No. $i item',
+  //         style: const TextStyle(color: Colors.yellow, fontSize: 20),
+  //       ),
   //     ));
   //   }
 
-  //   return list; //如果是map操作就需调用toList(),=> list.toList()
+  //   return list;
   // }
 
-  // List<Widget> _getMapList() {
-  //   var tempList = listData.map((val) {
-  //     return ListTile(
-  //       leading: Image.asset(val["imgUrl"]),
-  //       title: Text(val["title"]),
-  //       subtitle: Text(val["aaa"]),
-  //     );
-  //   });
-
-  //   return tempList.toList();
-  // }
-
-  // List<Widget> list = [];
-
-  // Dongtai() {
-  //   for (int i = 0; i < 20; i++) {
-  //     this.list.add(ListTile(title: Text("第$i条数据")));
-  //   }
-  // }
-
-  Widget _getWidgetData(context, index) {
-    return ListTile(
-      leading: Image.asset(listData[index]["imgUrl"]),
-      title: Text(listData[index]["title"]),
-      subtitle: Text(listData[index]["aaa"]),
+  Widget _getGridViewData(context, index) {
+    return Container(
+      decoration: BoxDecoration(
+          border: Border.all(
+        color: Colors.black,
+        width: 2,
+      )),
+      child: Column(
+        children: <Widget>[
+          Image.asset(listData[index]["imgUrl"]),
+          const SizedBox(height: 20.0),
+          Text(
+            listData[index]["title"],
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontSize: 20,
+            ),
+          )
+        ],
+      ),
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: listData.length, itemBuilder: _getWidgetData);
+    // return GridView.count(
+    //   crossAxisCount: 2,
+    //   crossAxisSpacing: 10.0, //left-right
+    //   mainAxisSpacing: 10.0, // top-bottom
+    //   padding: const EdgeInsets.all(10), //bianju
+    //   children: _getGridViewData(),
+    // );
+    return GridView.builder(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        crossAxisSpacing: 10.0, //left-right
+        mainAxisSpacing: 10.0, // top-bottom
+      ),
+      itemCount: listData.length,
+      itemBuilder: _getGridViewData,
+    );
   }
 }
