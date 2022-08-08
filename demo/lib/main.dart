@@ -43,17 +43,19 @@ class GrideView extends StatelessWidget {
       decoration: BoxDecoration(
           border: Border.all(
         color: Colors.black,
-        width: 2,
+        width: 1,
       )),
       child: Column(
         children: <Widget>[
-          Image.asset(listData[index]["imgUrl"]),
-          const SizedBox(height: 20.0),
+          Image.asset(
+            listData[index]["imgUrl"],
+            fit: BoxFit.cover,
+          ),
           Text(
             listData[index]["title"],
-            textAlign: TextAlign.center,
             style: const TextStyle(
-              fontSize: 20,
+              color: Colors.yellow,
+              fontSize: 10,
             ),
           )
         ],
@@ -70,14 +72,41 @@ class GrideView extends StatelessWidget {
     //   padding: const EdgeInsets.all(10), //bianju
     //   children: _getGridViewData(),
     // );
-    return GridView.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        crossAxisSpacing: 10.0, //left-right
-        mainAxisSpacing: 10.0, // top-bottom
-      ),
-      itemCount: listData.length,
-      itemBuilder: _getGridViewData,
+    // return GridView.builder(
+    //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+    //     crossAxisCount: 2,
+    //     crossAxisSpacing: 10.0, //left-right
+    //     mainAxisSpacing: 10.0, // top-bottom
+    //   ),
+    //   padding: const EdgeInsets.all(10),
+    //   itemCount: listData.length,
+    //   itemBuilder: _getGridViewData,
+    // );
+
+    return GridView.count(
+      crossAxisCount: 2,
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
+          child: Image.asset('images/2.jpg', fit: BoxFit.cover),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
+          child: Image.asset('images/2.jpg', fit: BoxFit.cover),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
+          child: Image.asset('images/2.jpg', fit: BoxFit.cover),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
+          child: Image.asset('images/2.jpg', fit: BoxFit.cover),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
+          child: Image.asset('images/2.jpg', fit: BoxFit.cover),
+        ),
+      ],
     );
   }
 }
