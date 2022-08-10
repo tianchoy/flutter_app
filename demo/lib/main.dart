@@ -38,30 +38,30 @@ class GrideView extends StatelessWidget {
   //   return list;
   // }
 
-  Widget _getGridViewData(context, index) {
-    return Container(
-      decoration: BoxDecoration(
-          border: Border.all(
-        color: Colors.black,
-        width: 1,
-      )),
-      child: Column(
-        children: <Widget>[
-          Image.asset(
-            listData[index]["imgUrl"],
-            fit: BoxFit.cover,
-          ),
-          Text(
-            listData[index]["title"],
-            style: const TextStyle(
-              color: Colors.yellow,
-              fontSize: 10,
-            ),
-          )
-        ],
-      ),
-    );
-  }
+  // Widget _getGridViewData(context, index) {
+  //   return Container(
+  //     decoration: BoxDecoration(
+  //         border: Border.all(
+  //       color: Colors.black,
+  //       width: 1,
+  //     )),
+  //     child: Column(
+  //       children: <Widget>[
+  //         Image.asset(
+  //           listData[index]["imgUrl"],
+  //           fit: BoxFit.cover,
+  //         ),
+  //         Text(
+  //           listData[index]["title"],
+  //           style: const TextStyle(
+  //             color: Colors.yellow,
+  //             fontSize: 10,
+  //           ),
+  //         )
+  //       ],
+  //     ),
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
