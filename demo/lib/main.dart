@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter-title'),
+        title: const Text('hello,flutter'),
       ),
       body: const GrideView(),
     ));
@@ -83,30 +83,143 @@ class GrideView extends StatelessWidget {
     //   itemBuilder: _getGridViewData,
     // );
     //padding
-    return GridView.count(
-      crossAxisCount: 2,
-      children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
-          child: Image.asset('images/2.jpg', fit: BoxFit.cover),
-        ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
-          child: Image.asset('images/2.jpg', fit: BoxFit.cover),
-        ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
-          child: Image.asset('images/2.jpg', fit: BoxFit.cover),
-        ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
-          child: Image.asset('images/2.jpg', fit: BoxFit.cover),
-        ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
-          child: Image.asset('images/2.jpg', fit: BoxFit.cover),
-        ),
-      ],
-    );
+    // return Padding(
+    //     padding: const EdgeInsets.fromLTRB(0, 0, 5, 0),
+    //     child: GridView.count(
+    //       crossAxisCount: 2,
+    //       childAspectRatio: 1.7,
+    //       children: <Widget>[
+    //         Padding(
+    //           padding: const EdgeInsets.fromLTRB(5, 5, 0, 0),
+    //           child: Image.asset('images/1.jpg', fit: BoxFit.cover),
+    //         ),
+    //         Padding(
+    //           padding: const EdgeInsets.fromLTRB(5, 5, 0, 0),
+    //           child: Image.asset('images/1.jpg', fit: BoxFit.cover),
+    //         ),
+    //         Padding(
+    //           padding: const EdgeInsets.fromLTRB(5, 5, 0, 0),
+    //           child: Image.asset('images/1.jpg', fit: BoxFit.cover),
+    //         ),
+    //         Padding(
+    //           padding: const EdgeInsets.fromLTRB(5, 5, 0, 0),
+    //           child: Image.asset('images/1.jpg', fit: BoxFit.cover),
+    //         ),
+    //         Padding(
+    //           padding: const EdgeInsets.fromLTRB(5, 5, 0, 0),
+    //           child: Image.asset('images/1.jpg', fit: BoxFit.cover),
+    //         ),
+    //       ],
+    //     ));
+
+    //return IconRow(Icons.search, Colors.red, 32);
+    return StackDemo();
+  }
+}
+
+// ignore: must_be_immutable
+// class IconRow extends StatelessWidget {
+//   double size = 32.0;
+//   Color color = Colors.red;
+//   IconData icon;
+
+//   IconRow(this.icon, this.color, this.size, {Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       width: 100.0,
+//       height: 100.0,
+//       color: color,
+//       child: Center(
+//         child: Icon(
+//           icon,
+//           size: size,
+//           color: Colors.white,
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// class LayoutDemo extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       color: Colors.white,
+//       width: 600.0,
+//       height: 600.0,
+//       child: Row(
+//         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//         crossAxisAlignment: CrossAxisAlignment.end,
+//         children: <Widget>[
+//           Expanded(
+//             flex: 1,
+//             child: IconRow(Icons.home, Colors.red, 32),
+//           ),
+//           IconRow(Icons.search, Colors.blue, 32),
+//           //IconRow(Icons.search, Colors.yellow, 32)
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+// class Layout extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//       children: <Widget>[
+//         Row(
+//           children: <Widget>[
+//             Expanded(
+//               child: Container(
+//                 height: 100.0,
+//                 color: Colors.red,
+//                 child: Text('hello'),
+//               ),
+//             )
+//           ],
+//         ),
+//         Row(
+//           children: <Widget>[
+//             Expanded(
+//               flex: 2,
+//               child: Container(
+//                 height: 100,
+//                 child: Image.asset('images/2.jpg', fit: BoxFit.cover),
+//               ),
+//             ),
+//             SizedBox(width: 10),
+//             Expanded(
+//               flex: 1,
+//               child: Container(
+//                 height: 100,
+//                 child: ListView(
+//                   children: [
+//                     Container(
+//                       height: 45,
+//                       child: Image.asset('images/2.jpg', fit: BoxFit.cover),
+//                     ),
+//                     SizedBox(height: 10),
+//                     Container(
+//                       height: 45,
+//                       child: Image.asset('images/2.jpg', fit: BoxFit.cover),
+//                     )
+//                   ],
+//                 ),
+//               ),
+//             )
+//           ],
+//         )
+//       ],
+//     );
+//   }
+// }
+
+class StackDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Stack();
   }
 }
