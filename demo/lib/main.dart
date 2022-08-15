@@ -113,7 +113,7 @@ class GrideView extends StatelessWidget {
     //     ));
 
     //return IconRow(Icons.search, Colors.red, 32);
-    return StackDemo();
+    return AspectRatioDemo();
   }
 }
 
@@ -217,9 +217,69 @@ class GrideView extends StatelessWidget {
 //   }
 // }
 
-class StackDemo extends StatelessWidget {
+// class StackAlignDemo extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Center(
+//       child: Container(
+//         width: 200,
+//         height: 200,
+//         color: Colors.red,
+//         child: Stack(
+//           children: const <Widget>[
+//             Align(
+//                 alignment: Alignment.topLeft,
+//                 child: Icon(
+//                   Icons.home,
+//                   size: 20,
+//                   color: Colors.white,
+//                 )),
+//             Align(
+//               alignment: Alignment.center,
+//               child: Icon(Icons.search, size: 20, color: Colors.black),
+//             ),
+//             Align(
+//               alignment: Alignment.bottomRight,
+//               child: Icon(Icons.send, size: 20, color: Colors.orange),
+//             )
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// class StackPositionDemo extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Center(
+//       child: Container(
+//         width: 200,
+//         height: 200,
+//         color: Colors.red,
+//         child: Stack(
+//           children: const <Widget>[
+//             Positioned(
+//                 left: 0,
+//                 child: Icon(Icons.home, size: 20, color: Colors.yellow)),
+//             Positioned(
+//                 left: 0,
+//                 bottom: 0,
+//                 child: Icon(Icons.search, size: 20, color: Colors.black)),
+//             Positioned(
+//                 right: 0,
+//                 bottom: 0,
+//                 child: Icon(Icons.send, size: 20, color: Colors.orange))
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+class AspectRatioDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Stack();
+    return Container();
   }
 }
