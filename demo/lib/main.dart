@@ -113,7 +113,7 @@ class GrideView extends StatelessWidget {
     //     ));
 
     //return IconRow(Icons.search, Colors.red, 32);
-    return AspectRatioDemo();
+    return PicAndWordCardDemo();
   }
 }
 
@@ -277,9 +277,70 @@ class GrideView extends StatelessWidget {
 //   }
 // }
 
-class AspectRatioDemo extends StatelessWidget {
+// class AspectRatioDemo extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       width: 200,
+//       child: AspectRatio(
+//         aspectRatio: 2.0 / 1.0,
+//         child: Container(
+//           color: Colors.red,
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// class CardDemo extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return ListView(
+//       children: <Widget>[
+//         Card(
+//           margin: const EdgeInsets.all(10),
+//           child: Column(
+//             children: const <Widget>[
+//               ListTile(
+//                 title: Text('tianchao', style: TextStyle(fontSize: 20)),
+//                 subtitle: Text('web font-end developer'),
+//               ),
+//               ListTile(
+//                 title: Text('tel:123456789'),
+//               ),
+//               ListTile(
+//                 title: Text('adress:shanghai'),
+//               )
+//             ],
+//           ),
+//         )
+//       ],
+//     );
+//   }
+// }
+
+class PicAndWordCardDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return ListView(
+      children: <Widget>[
+        Card(
+          margin: const EdgeInsets.all(10),
+          child: Column(
+            children: <Widget>[
+              Image.asset("images/2.jpg", fit: BoxFit.cover),
+              Row(
+                children: const <Widget>[
+                  ListTile(
+                    title: Text('tianchao'),
+                    subtitle: Text('web font-end developer'),
+                  )
+                ],
+              )
+            ],
+          ),
+        )
+      ],
+    );
   }
 }
