@@ -328,15 +328,11 @@ class PicAndWordCardDemo extends StatelessWidget {
           margin: const EdgeInsets.all(10),
           child: Column(
             children: <Widget>[
-              Image.asset("images/2.jpg", fit: BoxFit.cover),
-              Row(
-                children: const <Widget>[
-                  ListTile(
-                    title: Text('tianchao'),
-                    subtitle: Text('web font-end developer'),
-                  )
-                ],
-              )
+              Image.asset('images/2.jpg'),
+              ListTile(
+                title: Text('tianchao', style: TextStyle(fontSize: 20)),
+                subtitle: Text('web font-end developer'),
+              ),
             ],
           ),
         )
