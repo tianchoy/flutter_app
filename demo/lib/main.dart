@@ -319,24 +319,66 @@ class GrideView extends StatelessWidget {
 //   }
 // }
 
+// class PicAndWordCardDemo extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return ListView(
+//       children: <Widget>[
+//         Card(
+//           margin: const EdgeInsets.all(10),
+//           child: Column(
+//             children: <Widget>[
+//               AspectRatio(
+//                   aspectRatio: 16 / 9,
+//                   child: Image.asset(
+//                     'images/2.jpg',
+//                     fit: BoxFit.cover,
+//                   )),
+//               const ListTile(
+//                 leading: CircleAvatar(
+//                   backgroundImage: AssetImage('images/1.png'),
+//                 ),
+//                 title: Text('tianchao', style: TextStyle(fontSize: 20)),
+//                 subtitle: Text('web font-end developer'),
+//               ),
+//             ],
+//           ),
+//         )
+//       ],
+//     );
+//   }
+// }
+
 class PicAndWordCardDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: <Widget>[
-        Card(
+      children: listData.map((val) {
+        return Card(
           margin: const EdgeInsets.all(10),
           child: Column(
             children: <Widget>[
-              Image.asset('images/2.jpg'),
+              AspectRatio(
+                  aspectRatio: 16 / 9,
+                  child: Image.asset(
+                    val["imgUrl"],
+                    fit: BoxFit.cover,
+                  )),
               ListTile(
-                title: Text('tianchao', style: TextStyle(fontSize: 20)),
-                subtitle: Text('web font-end developer'),
+                leading: CircleAvatar(
+                  backgroundImage: AssetImage(val["imgUrl"]),
+                ),
+                title: Text(val["title"], style: const TextStyle(fontSize: 20)),
+                subtitle: Text(
+                  val["aaa"],
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
             ],
           ),
-        )
-      ],
+        );
+      }).toList(),
     );
   }
 }
