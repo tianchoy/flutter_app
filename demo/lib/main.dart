@@ -5,19 +5,19 @@ import 'response/listData.dart';
 
 void main() => runApp(const MyApp());
 
-// class MyApp extends StatelessWidget {
-//   const MyApp({Key? key}) : super(key: key);
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//         home: Scaffold(
-//       appBar: AppBar(
-//         title: const Text('hello,flutter'),
-//       ),
-//       body: const GrideView(),
-//     ));
-//   }
-// }
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+      appBar: AppBar(
+        title: const Text('hello,flutter'),
+      ),
+      body: HomePage(),
+    ));
+  }
+}
 
 // class GrideView extends StatelessWidget {
 //   const GrideView({Key? key}) : super(key: key);
@@ -439,4 +439,35 @@ void main() => runApp(const MyApp());
 //   }
 // }
 
-class MyApp extends StatefulWidget {}
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int countNum = 0;
+  List list = [];
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: [
+        Column(
+          children: list.map((val) {
+            return ListTile(
+              title: Text(val["title"]),
+            );
+          }).toList(),
+        ),
+        RaisedButton(
+            child: Text("getData"),
+            onPressed: () {
+              setState(() {
+                list.add({"title": "news1"});
+              });
+            })
+      ],
+    );
+  }
+}
