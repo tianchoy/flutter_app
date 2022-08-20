@@ -5,117 +5,117 @@ import 'response/listData.dart';
 
 void main() => runApp(const MyApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-      appBar: AppBar(
-        title: const Text('hello,flutter'),
-      ),
-      body: const GrideView(),
-    ));
-  }
-}
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//         home: Scaffold(
+//       appBar: AppBar(
+//         title: const Text('hello,flutter'),
+//       ),
+//       body: const GrideView(),
+//     ));
+//   }
+// }
 
-class GrideView extends StatelessWidget {
-  const GrideView({Key? key}) : super(key: key);
+// class GrideView extends StatelessWidget {
+//   const GrideView({Key? key}) : super(key: key);
 
-  // List<Widget> _getGridViewData() {
-  //   List<Widget> list = [];
-  //   for (int i = 0; i <= 11; i++) {
-  //     list.add(Container(
-  //       alignment: Alignment.center,
-  //       color: Colors.blue,
-  //       child: Text(
-  //         'No. $i item',
-  //         style: const TextStyle(color: Colors.yellow, fontSize: 20),
-  //       ),
-  //     ));
-  //   }
+//   // List<Widget> _getGridViewData() {
+//   //   List<Widget> list = [];
+//   //   for (int i = 0; i <= 11; i++) {
+//   //     list.add(Container(
+//   //       alignment: Alignment.center,
+//   //       color: Colors.blue,
+//   //       child: Text(
+//   //         'No. $i item',
+//   //         style: const TextStyle(color: Colors.yellow, fontSize: 20),
+//   //       ),
+//   //     ));
+//   //   }
 
-  //   return list;
-  // }
+//   //   return list;
+//   // }
 
-  // Widget _getGridViewData(context, index) {
-  //   return Container(
-  //     decoration: BoxDecoration(
-  //         border: Border.all(
-  //       color: Colors.black,
-  //       width: 1,
-  //     )),
-  //     child: Column(
-  //       children: <Widget>[
-  //         Image.asset(
-  //           listData[index]["imgUrl"],
-  //           fit: BoxFit.cover,
-  //         ),
-  //         Text(
-  //           listData[index]["title"],
-  //           style: const TextStyle(
-  //             color: Colors.yellow,
-  //             fontSize: 10,
-  //           ),
-  //         )
-  //       ],
-  //     ),
-  //   );
-  // }
+//   // Widget _getGridViewData(context, index) {
+//   //   return Container(
+//   //     decoration: BoxDecoration(
+//   //         border: Border.all(
+//   //       color: Colors.black,
+//   //       width: 1,
+//   //     )),
+//   //     child: Column(
+//   //       children: <Widget>[
+//   //         Image.asset(
+//   //           listData[index]["imgUrl"],
+//   //           fit: BoxFit.cover,
+//   //         ),
+//   //         Text(
+//   //           listData[index]["title"],
+//   //           style: const TextStyle(
+//   //             color: Colors.yellow,
+//   //             fontSize: 10,
+//   //           ),
+//   //         )
+//   //       ],
+//   //     ),
+//   //   );
+//   // }
 
-  @override
-  Widget build(BuildContext context) {
-    // return GridView.count(
-    //   crossAxisCount: 2,
-    //   crossAxisSpacing: 10.0, //left-right
-    //   mainAxisSpacing: 10.0, // top-bottom
-    //   padding: const EdgeInsets.all(10), //bianju
-    //   children: _getGridViewData(),
-    // );
-    // return GridView.builder(
-    //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-    //     crossAxisCount: 2,
-    //     crossAxisSpacing: 10.0, //left-right
-    //     mainAxisSpacing: 10.0, // top-bottom
-    //   ),
-    //   padding: const EdgeInsets.all(10),
-    //   itemCount: listData.length,
-    //   itemBuilder: _getGridViewData,
-    // );
-    //padding
-    // return Padding(
-    //     padding: const EdgeInsets.fromLTRB(0, 0, 5, 0),
-    //     child: GridView.count(
-    //       crossAxisCount: 2,
-    //       childAspectRatio: 1.7,
-    //       children: <Widget>[
-    //         Padding(
-    //           padding: const EdgeInsets.fromLTRB(5, 5, 0, 0),
-    //           child: Image.asset('images/1.jpg', fit: BoxFit.cover),
-    //         ),
-    //         Padding(
-    //           padding: const EdgeInsets.fromLTRB(5, 5, 0, 0),
-    //           child: Image.asset('images/1.jpg', fit: BoxFit.cover),
-    //         ),
-    //         Padding(
-    //           padding: const EdgeInsets.fromLTRB(5, 5, 0, 0),
-    //           child: Image.asset('images/1.jpg', fit: BoxFit.cover),
-    //         ),
-    //         Padding(
-    //           padding: const EdgeInsets.fromLTRB(5, 5, 0, 0),
-    //           child: Image.asset('images/1.jpg', fit: BoxFit.cover),
-    //         ),
-    //         Padding(
-    //           padding: const EdgeInsets.fromLTRB(5, 5, 0, 0),
-    //           child: Image.asset('images/1.jpg', fit: BoxFit.cover),
-    //         ),
-    //       ],
-    //     ));
+//   @override
+//   Widget build(BuildContext context) {
+//     // return GridView.count(
+//     //   crossAxisCount: 2,
+//     //   crossAxisSpacing: 10.0, //left-right
+//     //   mainAxisSpacing: 10.0, // top-bottom
+//     //   padding: const EdgeInsets.all(10), //bianju
+//     //   children: _getGridViewData(),
+//     // );
+//     // return GridView.builder(
+//     //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+//     //     crossAxisCount: 2,
+//     //     crossAxisSpacing: 10.0, //left-right
+//     //     mainAxisSpacing: 10.0, // top-bottom
+//     //   ),
+//     //   padding: const EdgeInsets.all(10),
+//     //   itemCount: listData.length,
+//     //   itemBuilder: _getGridViewData,
+//     // );
+//     //padding
+//     // return Padding(
+//     //     padding: const EdgeInsets.fromLTRB(0, 0, 5, 0),
+//     //     child: GridView.count(
+//     //       crossAxisCount: 2,
+//     //       childAspectRatio: 1.7,
+//     //       children: <Widget>[
+//     //         Padding(
+//     //           padding: const EdgeInsets.fromLTRB(5, 5, 0, 0),
+//     //           child: Image.asset('images/1.jpg', fit: BoxFit.cover),
+//     //         ),
+//     //         Padding(
+//     //           padding: const EdgeInsets.fromLTRB(5, 5, 0, 0),
+//     //           child: Image.asset('images/1.jpg', fit: BoxFit.cover),
+//     //         ),
+//     //         Padding(
+//     //           padding: const EdgeInsets.fromLTRB(5, 5, 0, 0),
+//     //           child: Image.asset('images/1.jpg', fit: BoxFit.cover),
+//     //         ),
+//     //         Padding(
+//     //           padding: const EdgeInsets.fromLTRB(5, 5, 0, 0),
+//     //           child: Image.asset('images/1.jpg', fit: BoxFit.cover),
+//     //         ),
+//     //         Padding(
+//     //           padding: const EdgeInsets.fromLTRB(5, 5, 0, 0),
+//     //           child: Image.asset('images/1.jpg', fit: BoxFit.cover),
+//     //         ),
+//     //       ],
+//     //     ));
 
-    //return IconRow(Icons.search, Colors.red, 32);
-    return PicAndWordCardDemo();
-  }
-}
+//     //return IconRow(Icons.search, Colors.red, 32);
+//     return WrapDemo();
+//   }
+// }
 
 // ignore: must_be_immutable
 // class IconRow extends StatelessWidget {
@@ -349,36 +349,94 @@ class GrideView extends StatelessWidget {
 //   }
 // }
 
-class PicAndWordCardDemo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      children: listData.map((val) {
-        return Card(
-          margin: const EdgeInsets.all(10),
-          child: Column(
-            children: <Widget>[
-              AspectRatio(
-                  aspectRatio: 16 / 9,
-                  child: Image.asset(
-                    val["imgUrl"],
-                    fit: BoxFit.cover,
-                  )),
-              ListTile(
-                leading: CircleAvatar(
-                  backgroundImage: AssetImage(val["imgUrl"]),
-                ),
-                title: Text(val["title"], style: const TextStyle(fontSize: 20)),
-                subtitle: Text(
-                  val["aaa"],
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ],
-          ),
-        );
-      }).toList(),
-    );
-  }
-}
+// class PicAndWordCardDemo extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return ListView(
+//       children: listData.map((val) {
+//         return Card(
+//           margin: const EdgeInsets.all(10),
+//           child: Column(
+//             children: <Widget>[
+//               AspectRatio(
+//                   aspectRatio: 16 / 9,
+//                   child: Image.asset(
+//                     val["imgUrl"],
+//                     fit: BoxFit.cover,
+//                   )),
+//               ListTile(
+//                 leading: CircleAvatar(
+//                   backgroundImage: AssetImage(val["imgUrl"]),
+//                 ),
+//                 title: Text(val["title"], style: const TextStyle(fontSize: 20)),
+//                 subtitle: Text(
+//                   val["aaa"],
+//                   maxLines: 2,
+//                   overflow: TextOverflow.ellipsis,
+//                 ),
+//               ),
+//             ],
+//           ),
+//         );
+//       }).toList(),
+//     );
+//   }
+// }
+
+// class WrapDemo extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Wrap(
+//       spacing: 10,
+//       runSpacing: 10,
+//       alignment: WrapAlignment.spaceBetween,
+//       children: const [
+//         MyButton(
+//           text: '1111',
+//         ),
+//         MyButton(
+//           text: '2222',
+//         ),
+//         MyButton(
+//           text: '3333',
+//         ),
+//         MyButton(
+//           text: '4444',
+//         ),
+//         MyButton(
+//           text: '5555',
+//         ),
+//         MyButton(
+//           text: '6666',
+//         )
+//       ],
+//     );
+//   }
+// }
+
+// class MyButton extends StatelessWidget {
+//   final String text;
+
+//   const MyButton({super.key, required this.text});
+//   @override
+//   Widget build(BuildContext context) {
+//     return ElevatedButton(
+//         style: ElevatedButton.styleFrom(
+//             onPrimary: Colors.blue,
+//             shape: RoundedRectangleBorder(
+//                 borderRadius: BorderRadius.circular(2.0))),
+//         onPressed: () {},
+//         child: Container(
+//           padding: const EdgeInsets.symmetric(horizontal: 12.0),
+//           child: Text(
+//             text,
+//             style: const TextStyle(
+//               color: Colors.white,
+//               fontSize: 20,
+//             ),
+//           ),
+//         ));
+//   }
+// }
+
+class MyApp extends StatefulWidget {}
