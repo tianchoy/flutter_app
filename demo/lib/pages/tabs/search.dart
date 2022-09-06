@@ -10,8 +10,6 @@ class Search extends StatefulWidget {
 class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('search page!'),
-    );
+    return const Text('data');
   }
 }

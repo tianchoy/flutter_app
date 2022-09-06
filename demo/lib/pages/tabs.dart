@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'tabs/home.dart';
 import 'tabs/category.dart';
-import 'tabs/search.dart';
+import 'testRouter/Search.dart';
 import 'tabs/archive.dart';
 
 class Tabs extends StatefulWidget {
@@ -16,7 +16,7 @@ class _TabsState extends State<Tabs> {
   final List _pagesList = [
     const HomePage(),
     const Category(),
-    const Search(),
+    const SearchPage(),
     const Archive()
   ];
   @override

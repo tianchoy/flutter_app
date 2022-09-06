@@ -1,16 +1,13 @@
 // ignore_for_file: camel_case_types
-
 import 'package:flutter/material.dart';
-import 'response/listData.dart';
-import 'pages/tabs.dart';
+import 'router/Routes.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Tabs());
+    return MaterialApp(initialRoute: '/', onGenerateRoute: onGenerateRoute);
   }
 }
 
@@ -434,35 +431,35 @@ class MyApp extends StatelessWidget {
 //   }
 // }
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+// class HomePage extends StatefulWidget {
+//   const HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
+//   @override
+//   State<HomePage> createState() => _HomePageState();
+// }
 
-class _HomePageState extends State<HomePage> {
-  int countNum = 0;
-  List list = [];
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        Column(
-          children: list.map((val) {
-            return ListTile(
-              title: Text(val["title"]),
-            );
-          }).toList(),
-        ),
-        RaisedButton(
-            child: Text("getData"),
-            onPressed: () {
-              setState(() {
-                list.add({"title": "news1"});
-              });
-            })
-      ],
-    );
-  }
-}
+// class _HomePageState extends State<HomePage> {
+//   int countNum = 0;
+//   List list = [];
+//   @override
+//   Widget build(BuildContext context) {
+//     return ListView(
+//       children: [
+//         Column(
+//           children: list.map((val) {
+//             return ListTile(
+//               title: Text(val["title"]),
+//             );
+//           }).toList(),
+//         ),
+//         RaisedButton(
+//             child: Text("getData"),
+//             onPressed: () {
+//               setState(() {
+//                 list.add({"title": "news1"});
+//               });
+//             })
+//       ],
+//     );
+//   }
+// }

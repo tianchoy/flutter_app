@@ -18,9 +18,10 @@ class _HomePageState extends State<HomePage> {
       children: [
         ElevatedButton(
           onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => const SearchPage(),
-            ));
+            // Navigator.of(context).push(MaterialPageRoute(
+            //   builder: (context) => const SearchPage(),
+            // ));
+            Navigator.pushNamed(context, '/search', arguments: {"id": 123});
           },
           style: ButtonStyle(
               padding: MaterialStateProperty.all(
@@ -30,8 +31,9 @@ class _HomePageState extends State<HomePage> {
         const SizedBox(height: 20.0),
         ElevatedButton(
           onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => FormPage(title: 'formPage')));
+            // Navigator.of(context).push(MaterialPageRoute(
+            //     builder: (context) => FormPage(title: 'formPage')));
+            Navigator.pushNamed(context, '/form');
           },
           style: ButtonStyle(
               padding: MaterialStateProperty.all(
