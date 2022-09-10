@@ -7,7 +7,11 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(initialRoute: '/', onGenerateRoute: onGenerateRoute);
+    return MaterialApp(
+      initialRoute: '/appBar',
+      onGenerateRoute: onGenerateRoute,
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
 

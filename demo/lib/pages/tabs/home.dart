@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import '../testRouter/Search.dart';
-import '../testRouter/form.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -39,7 +37,29 @@ class _HomePageState extends State<HomePage> {
               padding: MaterialStateProperty.all(
                   const EdgeInsets.fromLTRB(20, 10, 20, 10))),
           child: const Text('跳转至搜索页面并传值'),
-        )
+        ),
+        const SizedBox(
+          height: 20.0,
+        ),
+        ElevatedButton(
+          onPressed: () {
+            // Navigator.of(context).push(MaterialPageRoute(
+            //     builder: (context) => FormPage(title: 'formPage')));
+            Navigator.pushNamed(context, '/product');
+          },
+          style: ButtonStyle(
+              padding: MaterialStateProperty.all(
+                  const EdgeInsets.fromLTRB(20, 10, 20, 10))),
+          child: const Text('跳转至商品页面'),
+        ),
+        const SizedBox(height: 30),
+        ElevatedButton(
+            onPressed: () => {Navigator.pushNamed(context, '/login')},
+            child: const Text('Login')),
+        const SizedBox(height: 30),
+        ElevatedButton(
+            onPressed: () => {Navigator.pushNamed(context, '/register1')},
+            child: const Text('Register'))
       ],
     );
   }
