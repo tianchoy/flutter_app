@@ -31,8 +31,35 @@ class AppBarPage extends StatelessWidget {
               ],
             ),
           ),
-          body: const TabBarView(
-            children: [],
+          body: TabBarView(
+            children: [
+              ListView(
+                children: const [
+                  ListTile(
+                    title: Text('no.1 tabs'),
+                  ),
+                  ListTile(
+                    title: Text('no.1 tabs'),
+                  ),
+                  ListTile(
+                    title: Text('no.1 tabs'),
+                  ),
+                ],
+              ),
+              ListView(
+                children: const [
+                  ListTile(
+                    title: Text('no.2 tabs'),
+                  ),
+                  ListTile(
+                    title: Text('no.2 tabs'),
+                  ),
+                  ListTile(
+                    title: Text('no.2 tabs'),
+                  ),
+                ],
+              ),
+            ],
           ),
         ));
   }

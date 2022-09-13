@@ -1,4 +1,6 @@
 // ignore: file_names
+import 'dart:js';
+
 import 'package:demo/pages/appBar.dart';
 import 'package:flutter/material.dart';
 import 'package:demo/pages/Product.dart';
@@ -10,6 +12,7 @@ import 'package:demo/pages/user/login.dart';
 import 'package:demo/pages/user/register1.dart';
 import 'package:demo/pages/user/register2.dart';
 import 'package:demo/pages/appBar.dart';
+import 'package:demo/pages/TabBarController.dart';
 
 final routes = {
   '/': (context) => const Tabs(),
@@ -21,7 +24,8 @@ final routes = {
   '/login': (context) => const LoginPage(),
   '/register1': (context) => const Register1Page(),
   '/register2': (context) => const Register2Page(),
-  '/appBar': (context) => const AppBarPage()
+  '/appBar': (context) => const AppBarPage(),
+  '/tabBarController': (context) => const TabBarControllerPage()
 };
 
 var onGenerateRoute = (RouteSettings settings) {

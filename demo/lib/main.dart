@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/appBar',
+      initialRoute: '/',
       onGenerateRoute: onGenerateRoute,
       debugShowCheckedModeBanner: false,
     );

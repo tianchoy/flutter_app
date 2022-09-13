@@ -22,9 +22,9 @@ class _TabsState extends State<Tabs> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('hello,flutter'),
-      ),
+      // appBar: AppBar(
+      //   title: const Text('hello,flutter'),
+      // ),
       body: _pagesList[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
