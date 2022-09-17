@@ -1,6 +1,4 @@
-// ignore: file_names
-import 'dart:js';
-
+import 'package:demo/pages/Diago.dart';
 import 'package:demo/pages/appBar.dart';
 import 'package:flutter/material.dart';
 import 'package:demo/pages/Product.dart';
@@ -25,7 +23,8 @@ final routes = {
   '/register1': (context) => const Register1Page(),
   '/register2': (context) => const Register2Page(),
   '/appBar': (context) => const AppBarPage(),
-  '/tabBarController': (context) => const TabBarControllerPage()
+  '/tabBarController': (context) => const TabBarControllerPage(),
+  '/diago': (context) => const DiagoPage()
 };
 
 var onGenerateRoute = (RouteSettings settings) {

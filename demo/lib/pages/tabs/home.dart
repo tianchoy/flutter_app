@@ -66,7 +66,13 @@ class _HomePageState extends State<HomePage> {
         ElevatedButton(
             onPressed: () =>
                 {Navigator.pushNamed(context, '/tabBarController')},
-            child: const Text('TabBarControllerPage'))
+            child: const Text('TabBarControllerPage')),
+        const SizedBox(
+          height: 20,
+        ),
+        ElevatedButton(
+            onPressed: () => {Navigator.pushNamed(context, '/diago')},
+            child: const Text('diago'))
       ],
     );
   }
