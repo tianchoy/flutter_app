@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import './widget/MyDiago.dart';
 
 class DiagoPage extends StatefulWidget {
   const DiagoPage({super.key});
@@ -110,6 +111,19 @@ class _DiagoPageState extends State<DiagoPage> {
         fontSize: 16.0);
   }
 
+  void _customDiago() async {
+    var res = await showDialog(
+        barrierDismissible: true,
+        context: context,
+        builder: (context) {
+          return MyDiago("tips", "content", () {
+            Navigator.pop(context, 'closed');
+          });
+        });
+
+    print(res);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -138,6 +152,10 @@ class _DiagoPageState extends State<DiagoPage> {
             ),
             ElevatedButton(
                 onPressed: _fluttertoast, child: const Text('fluttertoast')),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(onPressed: _customDiago, child: const Text('custom'))
           ],
         ),
       ),

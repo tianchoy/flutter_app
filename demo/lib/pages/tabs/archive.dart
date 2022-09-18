@@ -11,7 +11,7 @@ class _ArchiveState extends State<Archive> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('archive page!'),
+      child: const Text('archive page!'),
     );
   }
 }
