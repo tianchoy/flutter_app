@@ -11,6 +11,7 @@ import 'package:demo/pages/user/register1.dart';
 import 'package:demo/pages/user/register2.dart';
 import 'package:demo/pages/appBar.dart';
 import 'package:demo/pages/TabBarController.dart';
+import 'package:demo/pages/pageView.dart';
 
 final routes = {
   '/': (context) => const Tabs(),
@@ -24,7 +25,8 @@ final routes = {
   '/register2': (context) => const Register2Page(),
   '/appBar': (context) => const AppBarPage(),
   '/tabBarController': (context) => const TabBarControllerPage(),
-  '/diago': (context) => const DiagoPage()
+  '/diago': (context) => const DiagoPage(),
+  '/pageview': (context) => const PageViewPage(),
 };
 
 var onGenerateRoute = (RouteSettings settings) {

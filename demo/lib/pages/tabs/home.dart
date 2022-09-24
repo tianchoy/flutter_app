@@ -72,7 +72,13 @@ class _HomePageState extends State<HomePage> {
         ),
         ElevatedButton(
             onPressed: () => {Navigator.pushNamed(context, '/diago')},
-            child: const Text('diago'))
+            child: const Text('diago')),
+        const SizedBox(
+          height: 20,
+        ),
+        ElevatedButton(
+            onPressed: () => {Navigator.pushNamed(context, '/pageview')},
+            child: const Text('pageview')),
       ],
     );
   }

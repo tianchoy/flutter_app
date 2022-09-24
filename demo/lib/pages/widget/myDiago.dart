@@ -8,7 +8,7 @@ class MyDiago extends Dialog {
   @override
   Widget build(BuildContext context) {
     return Material(
-        type: MaterialType.transparency,
+        type: MaterialType.transparency, //背景透明
         child: Center(
           child: Container(
             width: 200,
