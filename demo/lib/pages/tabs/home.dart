@@ -79,6 +79,12 @@ class _HomePageState extends State<HomePage> {
         ElevatedButton(
             onPressed: () => {Navigator.pushNamed(context, '/pageview')},
             child: const Text('pageview')),
+        const SizedBox(
+          height: 20,
+        ),
+        ElevatedButton(
+            onPressed: () => {Navigator.pushNamed(context, '/pageswiper')},
+            child: const Text('swiper'))
       ],
     );
   }

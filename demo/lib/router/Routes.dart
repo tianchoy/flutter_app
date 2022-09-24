@@ -12,6 +12,7 @@ import 'package:demo/pages/user/register2.dart';
 import 'package:demo/pages/appBar.dart';
 import 'package:demo/pages/TabBarController.dart';
 import 'package:demo/pages/pageView.dart';
+import 'package:demo/pages/pageSwiper.dart';
 
 final routes = {
   '/': (context) => const Tabs(),
@@ -27,6 +28,7 @@ final routes = {
   '/tabBarController': (context) => const TabBarControllerPage(),
   '/diago': (context) => const DiagoPage(),
   '/pageview': (context) => const PageViewPage(),
+  '/pageswiper': (context) => const PageSwiperPage()
 };
 
 var onGenerateRoute = (RouteSettings settings) {
