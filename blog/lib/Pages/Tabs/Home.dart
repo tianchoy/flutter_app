@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:dio/dio.dart';
 import 'package:simple_html_css/simple_html_css.dart';
+import '../../Config/Request.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,21 +13,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List homeData = [];
-
-  Future _getData() async {
-    var dio = Dio();
-    try {
-      Response res = await dio.get('https://www.tianchoy.com/api/getIndex.php');
-      return res.data;
-    } catch (e) {
-      return print(e);
-    }
-  }
+  String url = 'getIndex.php';
 
   @override
   initState() {
     super.initState();
-    _getData().then((val) {
+    getData(url).then((val) {
       setState(() {
         homeData = val['data'].toList();
       });
@@ -54,7 +45,6 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                     ),
-                    //subtitle: HTML.toRichText(context, value["content"]),
                     subtitle: RichText(
                       text: HTML.toTextSpan(context, value["content"]),
                       maxLines: 5,
