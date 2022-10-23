@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'Router/Router.dart';
+import 'package:get/get.dart';
+import 'Router/Routes.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,10 +9,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       initialRoute: '/',
-      onGenerateRoute: onGenerateRoute,
+      //onGenerateRoute: onGenerateRoute,
       debugShowCheckedModeBanner: false,
+      defaultTransition: Transition.rightToLeftWithFade,
+      getPages: AppRouter.routes,
     );
   }
 }

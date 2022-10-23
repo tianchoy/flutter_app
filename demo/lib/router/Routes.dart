@@ -1,4 +1,5 @@
 import 'package:demo/pages/Diago.dart';
+import 'package:demo/pages/Getx.dart';
 import 'package:demo/pages/appBar.dart';
 import 'package:flutter/material.dart';
 import 'package:demo/pages/Product.dart';
@@ -9,7 +10,6 @@ import 'package:demo/pages/ProductInfo.dart';
 import 'package:demo/pages/user/login.dart';
 import 'package:demo/pages/user/register1.dart';
 import 'package:demo/pages/user/register2.dart';
-import 'package:demo/pages/appBar.dart';
 import 'package:demo/pages/TabBarController.dart';
 import 'package:demo/pages/pageView.dart';
 import 'package:demo/pages/pageSwiper.dart';
@@ -28,7 +28,8 @@ final routes = {
   '/tabBarController': (context) => const TabBarControllerPage(),
   '/diago': (context) => const DiagoPage(),
   '/pageview': (context) => const PageViewPage(),
-  '/pageswiper': (context) => const PageSwiperPage()
+  '/pageswiper': (context) => const PageSwiperPage(),
+  '/getx': (context) => const GetxPage()
 };
 
 var onGenerateRoute = (RouteSettings settings) {
