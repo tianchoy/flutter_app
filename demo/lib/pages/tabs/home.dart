@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -45,7 +46,8 @@ class _HomePageState extends State<HomePage> {
           onPressed: () {
             // Navigator.of(context).push(MaterialPageRoute(
             //     builder: (context) => FormPage(title: 'formPage')));
-            Navigator.pushNamed(context, '/product');
+            //Navigator.pushNamed(context, '/product');
+            Get.toNamed('/prodect');
           },
           style: ButtonStyle(
               padding: MaterialStateProperty.all(
@@ -84,7 +86,16 @@ class _HomePageState extends State<HomePage> {
         ),
         ElevatedButton(
             onPressed: () => {Navigator.pushNamed(context, '/pageswiper')},
-            child: const Text('swiper'))
+            child: const Text('swiper')),
+        const SizedBox(
+          height: 20,
+        ),
+        ElevatedButton(
+            onPressed: () => {
+                  //Navigator.pushNamed(context, '/getx');
+                  Get.toNamed('/getx')
+                },
+            child: const Text('Getx'))
       ],
     );
   }

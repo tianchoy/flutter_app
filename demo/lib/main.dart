@@ -1,16 +1,22 @@
 // ignore_for_file: camel_case_types
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:demo/pages/tabs.dart';
 import 'router/Routes.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       initialRoute: '/',
-      onGenerateRoute: onGenerateRoute,
+      //onGenerateRoute: onGenerateRoute,
       debugShowCheckedModeBanner: false,
+      defaultTransition: Transition.rightToLeftWithFade,
+      getPages: [GetPage(name: '/', page: () => const Tabs())],
     );
   }
 }
