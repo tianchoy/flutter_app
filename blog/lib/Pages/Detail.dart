@@ -11,30 +11,46 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
-  List getArt = [];
-  String url = 'getArtDetail.php?id=';
+  // ignore: prefer_typing_uninitialized_variables
+  var getArt;
   @override
-  initState() {
+  void initState() {
     super.initState();
-    print(Get.arguments["id"]);
-
-    getData(url).then((res) => {getArt = res['data'].toList()});
+    // ignore: prefer_interpolation_to_compose_strings
+    String url = 'getArtDetail.php?id=' + Get.arguments["id"];
+    getDetail(url).then((res) {
+      setState(() {
+        getArt = res;
+      });
+    });
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('detail'),
+        title: Text(getArt["title"]),
       ),
-      body: Center(
-        child: Column(
-          children: const [
-            Text('data'),
-            SizedBox(
-              height: 20,
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(10, 20, 10, 20),
+            child: RichText(
+              text: HTML.toTextSpan(
+                context,
+                getArt["content"],
+                defaultTextStyle: TextStyle(
+                  color: Colors.grey[700],
+                  fontSize: 12,
+                  // etc etc
+                ),
+              ),
             ),
-          ],
-        ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+        ],
       ),
     );
   }

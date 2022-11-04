@@ -51,12 +51,18 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  Widget _loading() {
+    return const Center(
+      child: Text('加载中......'),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: const Text('首页'),
         ),
-        body: homeData.isNotEmpty ? _toBody() : const Text('加载中......'));
+        body: homeData.isNotEmpty ? _toBody() : _loading());
   }
 }
