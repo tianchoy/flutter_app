@@ -189,9 +189,9 @@
     },
     {
       "name": "string_scanner",
-      "rootUri": "file:///Users/tianchao/.pub-cache/hosted/pub.flutter-io.cn/string_scanner-1.1.1",
+      "rootUri": "file:///Users/tianchao/.pub-cache/hosted/pub.flutter-io.cn/string_scanner-1.2.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.18"
     },
     {
       "name": "term_glyph",
@@ -201,7 +201,7 @@
     },
     {
       "name": "test_api",
-      "rootUri": "file:///Users/tianchao/.pub-cache/hosted/pub.flutter-io.cn/test_api-0.4.15",
+      "rootUri": "file:///Users/tianchao/.pub-cache/hosted/pub.flutter-io.cn/test_api-0.4.16",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -236,7 +236,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2022-11-19T15:13:42.091097Z",
+  "generated": "2022-11-19T15:25:15.839450Z",
   "generator": "pub",
   "generatorVersion": "2.19.0-406.0.dev"
 }
