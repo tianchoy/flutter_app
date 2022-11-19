@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../Config/Request.dart';
 import 'package:simple_html_css/simple_html_css.dart';
+import 'components/commits.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({super.key});
@@ -61,30 +62,22 @@ class _DetailPageState extends State<DetailPage> {
             padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
             child: Row(
               children: <Widget>[
-                Container(
-                  width: 80,
-                  height: 80,
-                  color: Colors.red,
-                ),
+                Text(getArt["time"].toString()),
                 const Spacer(
                   flex: 1,
                 ),
-                Container(
-                  width: 80,
-                  height: 80,
-                  color: Colors.green,
-                ),
+                Text(getArt["hits"].toString()),
                 const Spacer(
                   flex: 1,
                 ),
-                Container(
-                  width: 80,
-                  height: 80,
-                  color: Colors.yellow,
-                ),
+                Text(getArt["art_love"].toString()),
               ],
             ),
-          )
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Commits(),
         ],
       ),
     );
