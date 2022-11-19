@@ -125,21 +125,6 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: const Text('data')),
         ),
-        //child: const WebView(
-        //initialUrl: 'https://baidu.com',
-        //javascriptMode: JavascriptMode.unrestricted,
-        // onWebViewCreated: (WebViewController controller) {
-        //   print(controller);
-        // },
-        // javascriptChannels: <JavascriptChannel>{
-        //   JavascriptChannel(
-        //     name: "FlutterBridge",
-        //     onMessageReceived: (JavascriptMessage message) {
-        //       print("js 发来消息 ${message.message}");
-        //     },
-        //   ),
-        // },
-        //),
       ),
     );
   }
