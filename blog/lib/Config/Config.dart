@@ -1,3 +1,5 @@
+import 'package:dio/dio.dart';
+
 class NetWorkConfig {
   static String baseUrl = "https://tianchoy.com/api/";
   static const connectTimeOut = 10000;
