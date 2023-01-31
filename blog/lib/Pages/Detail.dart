@@ -74,10 +74,10 @@ class _DetailPageState extends State<DetailPage> {
               ],
             ),
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          Commits(),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+            child: Commits(),
+          )
         ],
       ),
     );

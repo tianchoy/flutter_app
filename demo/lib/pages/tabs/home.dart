@@ -20,7 +20,8 @@ class _HomePageState extends State<HomePage> {
             // Navigator.of(context).push(MaterialPageRoute(
             //   builder: (context) => const SearchPage(),
             // ));
-            Navigator.pushNamed(context, '/search', arguments: {"id": 123});
+            //Navigator.pushNamed(context, '/search', arguments: {"id": 123});
+            Get.toNamed('/search');
           },
           style: ButtonStyle(
               padding: MaterialStateProperty.all(
