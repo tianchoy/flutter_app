@@ -8,15 +8,17 @@ class Commits extends StatefulWidget {
 }
 
 class _CommitsState extends State<Commits> {
+
+
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const <Widget>[
+    return const Column(
+      children: <Widget>[
         TextField(
           autofocus: true,
           decoration: InputDecoration(
             labelText: "username:",
-            hintText: 'please input username',
+            hintText: '输入用户名',
             prefixIcon: Icon(Icons.person),
           ),
           maxLength: 1,
@@ -24,9 +26,10 @@ class _CommitsState extends State<Commits> {
         TextField(
           decoration: InputDecoration(
               labelText: "Content",
-              hintText: "please input Content",
+              hintText: "说点啥？",
               prefixIcon: Icon(Icons.comment)),
         ),
+        // ElevatedButton(child: Text('发布'))
       ],
     );
   }

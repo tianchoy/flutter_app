@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import '../../Config/Request.dart';
 import 'package:simple_html_css/simple_html_css.dart';
 import 'components/commits.dart';
+import 'components/commitsList.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({super.key});
@@ -16,6 +17,7 @@ class _DetailPageState extends State<DetailPage> {
   artDetail() {
     String url = 'getArtDetail.php?id=' + Get.arguments["id"];
     getDetail(url).then((res) {
+      print(res);
       if (res != Null) {
         setState(() {
           getArt = res;
@@ -77,7 +79,10 @@ class _DetailPageState extends State<DetailPage> {
           const Padding(
             padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
             child: Commits(),
-          )
+          ),
+          const Padding(
+              padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+              child: CommitsList())
         ],
       ),
     );
