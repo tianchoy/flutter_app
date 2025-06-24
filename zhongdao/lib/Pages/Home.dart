@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import '../Components/TopNavBar.dart';
+import '../Components/top_nav_bar.dart';
 import '../utils/logger.dart';
+import 'package:get/get.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -12,7 +13,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   // 导航栏配置状态
   String _title = '首页';
-  bool _showBackButton = false;
+  final bool _showBackButton = false;
 
   // 处理返回按钮点击
   void _handleBackPressed() {
@@ -26,7 +27,7 @@ class _HomeState extends State<Home> {
     // 执行添加操作或其他逻辑
   }
 
-  Widget buildContents() {
+  Widget buildContents(context) {
     return ListView(
       children: [
         Center(
@@ -37,12 +38,17 @@ class _HomeState extends State<Home> {
         ),
         const SizedBox(height: 20),
         Center(
+          child: Text(
+            '当前平台: ${MediaQuery.of(context).size.width}',
+            style: CupertinoTheme.of(context).textTheme.textStyle,
+          ),
+        ),
+        const SizedBox(height: 20),
+        Center(
           child: CupertinoButton.filled(
             onPressed: () {
-              // 动态修改导航栏配置示例
               setState(() {
-                _showBackButton = !_showBackButton;
-                _title = _showBackButton ? '返回已启用' : '首页';
+                _title = GetPlatform.isIOS ? 'iOS平台' : 'Android平台';
               });
             },
             child: const Text('切换返回按钮状态'),
@@ -62,7 +68,7 @@ class _HomeState extends State<Home> {
         onBackPressed: _handleBackPressed,
         onSearchPressed: onSearchPressed,
       ),
-      child: buildContents(),
+      child: buildContents(context),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import '../Pages/Home.dart';
-import '../Pages/userCenter.dart';
+import '../Pages/home.dart';
+import '../Pages/user_center.dart';
 
 class TabBar extends StatefulWidget {
   const TabBar({super.key});

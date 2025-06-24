@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import '../Components/TopNavBar.dart';
+import '../Components/top_nav_bar.dart';
 import '../utils/logger.dart';
 
 class UserCenter extends StatefulWidget {

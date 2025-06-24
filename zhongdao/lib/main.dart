@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'Router/Router.dart';
+import 'Router/router.dart';
 
 void main() => runApp(const App());
 
