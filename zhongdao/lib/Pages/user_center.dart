@@ -22,22 +22,20 @@ class _UserCenterState extends State<UserCenter> {
   }
 
   Widget buildContents() {
-    return CupertinoPageScaffold(
+    return Container(
+      padding: const EdgeInsets.all(16.0),
       child: ListView(
         children: [
           Center(
             child: Text(
-              'Welcome to User Center',
-              style: CupertinoTheme.of(
-                context,
-              ).textTheme.navLargeTitleTextStyle,
+              '欢迎来到个人中心页面',
+              style: CupertinoTheme.of(context).textTheme.navTitleTextStyle,
             ),
           ),
           const SizedBox(height: 20),
           Center(
             child: CupertinoButton.filled(
               onPressed: () {
-                // Action when button is pressed
                 logger.d('User Center Button Pressed!');
               },
               child: const Text('Click Me'),

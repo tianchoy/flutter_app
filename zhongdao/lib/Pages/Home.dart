@@ -12,7 +12,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   // 导航栏配置状态
-  String _title = '首页';
+  final String _title = '首页';
+  RxString test = '测试'.obs;
   final bool _showBackButton = false;
 
   // 处理返回按钮点击
@@ -28,33 +29,36 @@ class _HomeState extends State<Home> {
   }
 
   Widget buildContents(context) {
-    return ListView(
-      children: [
-        Center(
-          child: Text(
-            'Welcome to Home Page',
-            style: CupertinoTheme.of(context).textTheme.navLargeTitleTextStyle,
+    return Container(
+      padding: const EdgeInsets.all(16.0),
+      child: ListView(
+        children: [
+          Center(
+            child: Text(
+              '欢迎来到首页',
+              style: CupertinoTheme.of(context).textTheme.textStyle,
+            ),
           ),
-        ),
-        const SizedBox(height: 20),
-        Center(
-          child: Text(
-            '当前平台: ${MediaQuery.of(context).size.width}',
-            style: CupertinoTheme.of(context).textTheme.textStyle,
+          const SizedBox(height: 20),
+          Obx(
+            () => Center(
+              child: Text(
+                '当前平台: ${test.value}',
+                style: CupertinoTheme.of(context).textTheme.textStyle,
+              ),
+            ),
           ),
-        ),
-        const SizedBox(height: 20),
-        Center(
-          child: CupertinoButton.filled(
-            onPressed: () {
-              setState(() {
-                _title = GetPlatform.isIOS ? 'iOS平台' : 'Android平台';
-              });
-            },
-            child: const Text('切换返回按钮状态'),
+          const SizedBox(height: 20),
+          Center(
+            child: CupertinoButton.filled(
+              onPressed: () {
+                Get.toNamed('/login');
+              },
+              child: const Text('登陆'),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 

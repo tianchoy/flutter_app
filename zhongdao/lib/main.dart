@@ -13,7 +13,14 @@ class App extends StatelessWidget {
       title: '中导物联',
       theme: CupertinoThemeData(
         primaryColor: const Color(0xFF007AFF),
-        scaffoldBackgroundColor: const Color(0xFFF2F2F7),
+        scaffoldBackgroundColor: CupertinoColors.systemBackground, // 改为系统背景色
+        brightness: Brightness.light, // 强制亮色主题
+        textTheme: CupertinoTextThemeData(
+          textStyle: TextStyle(
+            fontFamily: 'PingFang SC', // 使用中文字体
+            color: CupertinoColors.label, // 标签颜色适配主题
+          ),
+        ),
       ),
       debugShowCheckedModeBanner: false,
       defaultTransition: Transition.cupertino,
