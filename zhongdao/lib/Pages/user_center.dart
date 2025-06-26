@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import '../Components/top_nav_bar.dart';
 import '../utils/logger.dart';
+import '../utils/dialog_utils.dart'; // 导入工具类
 
 class UserCenter extends StatefulWidget {
   const UserCenter({super.key});
@@ -36,7 +37,11 @@ class _UserCenterState extends State<UserCenter> {
           Center(
             child: CupertinoButton.filled(
               onPressed: () {
-                logger.d('User Center Button Pressed!');
+                showCustomCupertinoDialog(
+                  context: context,
+                  title: '提示',
+                  content: '这是一个对话框示例1111',
+                );
               },
               child: const Text('Click Me'),
             ),

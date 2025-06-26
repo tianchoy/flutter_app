@@ -37,7 +37,6 @@ dependencies:
   get: ^4.7.2
   logger: ^2.6.0
   dio: ^5.8.0+1
-  adaptive_dialog: ^2.4.2
 
 dev_dependencies:
   flutter_test:
