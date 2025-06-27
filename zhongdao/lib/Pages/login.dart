@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -75,7 +76,9 @@ class Login extends StatelessWidget {
                   width: double.infinity,
                   height: 55,
                   child: CupertinoButton.filled(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.back();
+                    },
                     child: const Text('登录'),
                   ),
                 ),
