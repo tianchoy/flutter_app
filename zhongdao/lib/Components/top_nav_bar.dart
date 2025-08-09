@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
 
 // 定义右侧按钮类型
 enum NavBarButtonType { add, search, settings, none }
@@ -8,20 +9,24 @@ class TopNavBar extends StatelessWidget
   final String title;
   final bool showBackButton;
   final NavBarButtonType rightButtonType;
-  final VoidCallback? onBackPressed;
   final VoidCallback? onAddPressed;
   final VoidCallback? onSearchPressed;
   final VoidCallback? onSettingsPressed;
+  final VoidCallback? onRightTextPressed;
+  final String rightText;
+  final bool showRight;
 
   const TopNavBar({
     super.key,
     required this.title,
     this.showBackButton = false,
     this.rightButtonType = NavBarButtonType.add,
-    this.onBackPressed,
     this.onAddPressed,
     this.onSearchPressed,
     this.onSettingsPressed,
+    this.onRightTextPressed,
+    this.rightText = '',
+    this.showRight = false,
   });
 
   @override
@@ -29,14 +34,15 @@ class TopNavBar extends StatelessWidget
     return CupertinoNavigationBar(
       middle: Text(title),
       automaticallyImplyLeading: false,
+
       leading: showBackButton
           ? CupertinoButton(
               padding: EdgeInsets.zero,
-              onPressed: onBackPressed,
-              child: const Icon(CupertinoIcons.back),
+              onPressed: () => {Get.back()},
+              child: const Icon(CupertinoIcons.back, size: 30.0),
             )
           : null,
-      trailing: _buildRightButton(),
+      trailing: showRight ? _buildRightButton() : null,
     );
   }
 
@@ -45,21 +51,31 @@ class TopNavBar extends StatelessWidget
     switch (rightButtonType) {
       case NavBarButtonType.add:
         return CupertinoButton(
+          padding: EdgeInsets.zero,
           onPressed: onAddPressed,
           child: const Icon(CupertinoIcons.add),
         );
       case NavBarButtonType.search:
         return CupertinoButton(
+          padding: EdgeInsets.zero,
           onPressed: onSearchPressed,
           child: const Icon(CupertinoIcons.search),
         );
       case NavBarButtonType.settings:
         return CupertinoButton(
+          padding: EdgeInsets.zero,
           onPressed: onSettingsPressed,
           child: const Icon(CupertinoIcons.settings),
         );
       case NavBarButtonType.none:
-        return null;
+        return CupertinoButton(
+          padding: EdgeInsets.zero,
+          onPressed: onRightTextPressed,
+          child: Text(
+            rightText,
+            style: const TextStyle(color: CupertinoColors.black),
+          ),
+        );
     }
   }
 

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import '../Components/top_nav_bar.dart';
+import 'package:get/get.dart';
 import '../utils/logger.dart';
 
 class UserCenter extends StatefulWidget {
@@ -12,10 +13,6 @@ class UserCenter extends StatefulWidget {
 class _UserCenterState extends State<UserCenter> {
   final String _title = '个人中心';
   final bool _showBackButton = false;
-
-  void _handleBackPressed() {
-    logger.d('个人中心父组件处理返回逻辑');
-  }
 
   void onSettingsPressed() {
     logger.d('个人中心父组件处理右侧按钮逻辑');
@@ -52,9 +49,12 @@ class _UserCenterState extends State<UserCenter> {
       navigationBar: TopNavBar(
         title: _title,
         showBackButton: _showBackButton,
-        rightButtonType: NavBarButtonType.settings,
-        onBackPressed: _handleBackPressed,
-        onSettingsPressed: onSettingsPressed,
+        rightButtonType: NavBarButtonType.none,
+        onRightTextPressed: () {
+          Get.toNamed('/login');
+        },
+        showRight: true,
+        rightText: '登陆',
       ),
       child: buildContents(),
     );

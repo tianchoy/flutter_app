@@ -16,18 +16,6 @@ class _HomeState extends State<Home> {
   RxString test = '测试'.obs;
   final bool _showBackButton = false;
 
-  // 处理返回按钮点击
-  void _handleBackPressed() {
-    logger.d('首页父组件处理返回逻辑');
-    // 执行返回操作或其他逻辑
-  }
-
-  // 处理右侧按钮点击
-  void onSearchPressed() {
-    logger.d('首页父组件处理右侧按钮逻辑');
-    // 执行添加操作或其他逻辑
-  }
-
   Widget buildContents(context) {
     return Container(
       padding: const EdgeInsets.all(16.0),
@@ -68,9 +56,8 @@ class _HomeState extends State<Home> {
       navigationBar: TopNavBar(
         title: _title,
         showBackButton: _showBackButton,
-        rightButtonType: NavBarButtonType.search,
-        onBackPressed: _handleBackPressed,
-        onSearchPressed: onSearchPressed,
+        rightButtonType: NavBarButtonType.none,
+        showRight: false,
       ),
       child: buildContents(context),
     );
