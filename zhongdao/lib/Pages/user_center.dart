@@ -14,10 +14,6 @@ class _UserCenterState extends State<UserCenter> {
   final String _title = '个人中心';
   final bool _showBackButton = false;
 
-  void onSettingsPressed() {
-    logger.d('个人中心父组件处理右侧按钮逻辑');
-  }
-
   Widget buildContents() {
     return Container(
       padding: const EdgeInsets.all(16.0),

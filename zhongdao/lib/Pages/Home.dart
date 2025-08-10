@@ -36,15 +36,6 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
-          const SizedBox(height: 20),
-          Center(
-            child: CupertinoButton.filled(
-              onPressed: () {
-                Get.toNamed('/login');
-              },
-              child: const Text('登陆'),
-            ),
-          ),
         ],
       ),
     );
