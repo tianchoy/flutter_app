@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:zhongdao/Components/top_nav_bar.dart';
+import 'package:get/get.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -77,12 +78,14 @@ Widget _buildContents(BuildContext context) {
           ),
         ),
         const SizedBox(height: 40),
-        SizedBox(
-          width: double.infinity,
-          height: 55,
-          child: CupertinoButton.filled(
-            onPressed: () {},
-            child: const Text('登录'),
+        Obx(
+          () => SizedBox(
+            width: double.infinity,
+            height: 55,
+            child: CupertinoButton.filled(
+              onPressed: () {},
+              child: const Text('登录'),
+            ),
           ),
         ),
         const SizedBox(height: 20),
